@@ -4,7 +4,6 @@ import AlamatSection from "@/sections/AlamatSection";
 import GaleriSection from "@/sections/GaleriSection";
 import LayananSection from "@/sections/LayananSection";
 import MainSection from "@/sections/MainSection";
-import Image from "next/image";
 
 export default function Home() {
   return (
