@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 // import GoogleTagManager from "@/lib/GoogleTagManager";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -26,13 +27,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="AW-10857947855" />
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10857947855"
+          strategy="afterInteractive"
+        />
+        {/* Menambahkan konfigurasi gtag */}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-10857947855');
+        `}
+        </Script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
-      <GoogleAnalytics gaId="AW-10857947855" />
     </html>
   );
 }
