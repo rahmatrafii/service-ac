@@ -48,7 +48,7 @@ const LayananSection = () => {
       <h1 className="text-[30px] md:text-[40px] font-semibold text-black mb-10">
         LAYANAN KAMI
       </h1>
-      <div className="flex gap-6 w-full justify-evenly items-center relative z-[1] max-h-[600px]  flex-wrap overflow-y-scroll p-5 mb-10">
+      <div className="flex gap-6 w-full justify-evenly items-center relative z-[1] max-h-[600px] max-w-[1200px] flex-wrap overflow-y-scroll p-5 mb-10">
         {layanan.map((item) => (
           <div
             key={item.link}
@@ -56,6 +56,7 @@ const LayananSection = () => {
           >
             <Image
               src={`/images${item.link}`}
+              unoptimized
               alt="w-[100px]"
               width={100}
               height={100}

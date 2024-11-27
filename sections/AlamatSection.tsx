@@ -30,7 +30,7 @@ const AlamatSection = (props: Props) => {
       <h1 className="text-black text-[30px] md:text-[40px] text-center font-bold mb-10">
         ALAMAT
       </h1>
-      <div className="flex flex-col md:flex-row text-black justify-between">
+      <div className="flex flex-col md:flex-row text-black justify-between max-w-[1200px] mx-auto ">
         <div className="mb-7">
           <h5 className="text-uppercase mb-4 text-xl">About company</h5>
           <div className="mb-4">

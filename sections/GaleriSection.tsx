@@ -11,7 +11,7 @@ const GaleriSection = () => {
       <h1 className="text-[30px] md:text-[40px] font-semibold text-black mb-10">
         GALERI KAMI
       </h1>
-      <div className="flex flex-row justify-evenly gap-5 w-full  max-h-[600px]  flex-wrap overflow-y-scroll p-5 mb-10">
+      <div className="flex flex-row justify-evenly gap-5 w-full  max-h-[600px]  flex-wrap overflow-y-scroll p-5 mb-10 max-w-[1200px] mx-auto">
         {numberImgae.map((i) => (
           <div
             key={i}
